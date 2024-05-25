@@ -12,7 +12,7 @@ export default function Home() {
             web3
           </span>
         </h1>
-        <iframe
+        {/* <iframe
           title="Pori Jazz intro video"
           className="h-[140%] w-full"
           src="https://player.vimeo.com/video/912867382?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0"
@@ -21,7 +21,12 @@ export default function Home() {
           loading="lazy"
           frameBorder="0"
           allowFullScreen
-        ></iframe>
+        ></iframe> */}
+
+        <video preload="metadata" autoPlay muted playsInline loop>
+          <source src="/7722221-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <main className="grid grid-cols-2">
