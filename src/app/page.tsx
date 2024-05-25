@@ -1,113 +1,94 @@
-import Image from "next/image";
+import { roboto_mono } from "@/app/components/fonts";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className="w-full h-[650px] overflow-hidden flex justify-center items-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+        <h1
+          className={`${roboto_mono.className} absolute text-white uppercase text-9xl pl-20 drop-shadow-lg font-bold`}
+        >
+          Attend concerts via{" "}
+          <span className="bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-blue-300 hover:to-green-300 bg-clip-text text-transparent">
+            web3
+          </span>
+        </h1>
+        <iframe
+          title="Pori Jazz intro video"
+          className="h-[140%] w-full"
+          src="https://player.vimeo.com/video/912867382?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          aria-hidden="true"
+          loading="lazy"
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <main className="grid grid-cols-2">
+        <div className="h-[378px] bg-orange-500 text-white flex flex-col items-center justify-center p-8">
+          <h1 className="text-3xl font-bold">
+            Pori Jazz announces first artists for summer 2024!
+          </h1>
+          <button className="mt-4 bg-white text-orange-500 font-bold py-2 px-8 rounded-full uppercase">
+            READ MORE
+          </button>
         </div>
-      </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="h-[378px] bg-blue-700 text-white flex flex-col items-center justify-center">
+          <img
+            src="https://content.porijazz.fi/wp-content/uploads/2024/02/verkkosivukuvat-2000x1000-jason-derulo-19-7-1024x512.jpg"
+            alt="Art"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className=" h-[378px] bg-green-400 text-white flex flex-col items-center justify-center">
+          <img
+            src="https://content.porijazz.fi/wp-content/uploads/2024/02/porijazz2024-yleiso-box.jpg"
+            alt="Art"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="h-[378px] bg-purple-700 text-white flex flex-col items-center justify-center p-8">
+          <h1 className="text-3xl font-bold">
+            It’s all about environmental and social responsibility.
+          </h1>
+          <button className="mt-4 bg-white text-purple-700 font-bold py-2 px-8 rounded-full uppercase">
+            Find out more!
+          </button>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className="h-[378px] bg-red-500 text-white flex flex-col items-center justify-center p-8">
+          <h1 className="text-3xl font-bold">
+            Subscribe our newsletter and stay tuned!
+          </h1>
+          <button className="mt-4 bg-white text-red-500 font-bold py-2 px-8 rounded-full uppercase">
+            SUBSCRIBE NOW!
+          </button>
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="h-[378px] bg-yellow-500 text-white flex flex-col items-center justify-center">
+          <img
+            src="https://s1.s.tmol.io/static/98b3ba2cb0ebe59c335a7710a7367bc5.jpg"
+            alt="People enjoying the festival"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </main>
+
+      <main className="flex justify-center items-center h-[480px] mx-auto py-10 bg-[url('https://content.porijazz.fi/wp-content/uploads/2023/10/hashtag-2024-iso.jpg')]">
+        <section>
+          <h1 className=" text-9xl font-bold mb-6 text-center text-white">
+            Get Your Tickets
+          </h1>
+          <div className="text-center mt-20">
+            <button className="text-3xl font-bold bg-blue-900 text-white py-4 px-16  hover:bg-blue-700 transition duration-200 rounded-full uppercase">
+              Buy Tickets
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
