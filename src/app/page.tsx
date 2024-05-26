@@ -1,4 +1,5 @@
 import { roboto_mono } from "@/app/components/fonts";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -84,13 +85,16 @@ export default function Home() {
 
       <main className="flex justify-center items-center h-[480px] mx-auto py-10 bg-[url('https://content.porijazz.fi/wp-content/uploads/2023/10/hashtag-2024-iso.jpg')]">
         <section>
-          <h1 className=" text-9xl font-bold mb-6 text-center text-white">
+          <h1 className=" text-9xl font-bold mb-6 text-center text-white drop-shadow-lg">
             Get Your Tickets
           </h1>
           <div className="text-center mt-20">
-            <button className="text-3xl font-bold bg-blue-900 text-white py-4 px-16  hover:bg-blue-700 transition duration-200 rounded-full uppercase">
+            <Link
+              href="/concerts"
+              className="text-3xl font-bold text-white py-4 px-16  transition duration-200 rounded-full uppercase bg-gradient-to-r from-yellow-500 to-pink-500 hover:from-yellow-400 hover:to-pink-400 shadow-lg"
+            >
               Buy Tickets
-            </button>
+            </Link>
           </div>
         </section>
       </main>
